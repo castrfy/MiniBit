@@ -25,18 +25,38 @@ MiniBit, binlerce kilometre uzaklıktaki uzay araçlarına veri göndermek için
 
 - Python 3.8+
 - \`customtkinter\`
+- CMake
 
 \`\`\`bash
 pip install customtkinter
 \`\`\`
 
-### Uygulamayı Çalıştırma
+\`cpp\` klasörünün içinde build adlı bir klasör oluşturun ve içine girin ardından,
+\`\`\`bash
+cmake ..
+make
+\`\`\`
+komutlarını çalıştırarak cpp dosyalarını derleyin
+
+### Uygulamayı Derleme
 
 \`\`\`bash
-python main.py
+python -m PyInstaller satellite_panel.py --onefile --noconsole
 \`\`\`
 
-> \`icon.ico\` dosyasının \`main.py\` ile aynı dizinde olduğundan emin olun.
+> \`icon.ico\` dosyasının \`satellite_panel.exe\` ile aynı dizinde olduğundan emin olun.
+> derlenmiş haldeki \`minibit_compresser\`dosyasının \`satellite_panel.exe\` ile aynı dizindeki \`cpp/build/\` klasörünün içinde olduğuna emin olun
+
+sonrasında uygulamayı çalıştırabilirsiniz.
+
+### Ya da direk olarak kodu çalıştırın
+
+\`\`\`bash
+python satellite_panel.py
+\`\`\`
+
+> \`icon.ico\` dosyasının \`satellite_panel.py\` ile aynı dizinde olduğundan emin olun.
+> derlenmiş haldeki \`minibit_compresser\` dosyasının \`satellite_panel.py\` ile aynı dizindeki \`cpp/build/\` klasörünün içinde olduğuna emin olun
 
 ---
 
@@ -54,18 +74,21 @@ python main.py
 
 \`\`\`
 MiniBit/
+├──cpp
+│   └──build
+│        └── minibit_compresser # Binary çalıştırılabilir uygulama
 ├── main.py        # Ana uygulama
-├── icon.ico       # Uygulama ikonu
-└── README.md
+└── icon.ico       # Uygulama ikonu 
 \`\`\`
 
 ---
 
 ## Yol Haritası
 
-- [ ] Gerçek sıkıştırma algoritmaları entegre etmek
+- [√] Gerçek sıkıştırma algoritmaları entegre etmek
+- [√] Farklı tür dosyaları desteklemek (\`.csv\`, \`.json\`, \`.bin\`)
+- [ ] Daha fazla sıkıştırma algoritması ekleme
 - [ ] Sunucu transfer geri bildirimi eklemek (başarı/hata yanıtı)
-- [ ] Farklı tür dosyaları desteklemek (\`.csv\`, \`.json\`, \`.bin\`)
 - [ ] Sıkıştırma bilgilerini gösteren ekran oluşturmak
 - [ ] Gönderi geçmişi
 
