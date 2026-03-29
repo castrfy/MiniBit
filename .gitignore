@@ -2,5 +2,5 @@ build/*
 __pycache__
 cpp/build
 .vscode/
-.DS_Store/
+.DS_Store
 cpp/rle.dSYM/Contents
