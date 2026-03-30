@@ -1,6 +1,6 @@
 # 🛰️ MiniBit — Veri Sıkıştırma Paneli
 
-Uzay araçlarına aktarım için veri sıkıştırma işlemi yapan bir uygulama. Python'ın CustomTkinteri ve C++ ile oluşturuldu.
+Uzay araçlarına aktarım için veri sıkıştırma işlemi yapan bir uygulama. Python'un CustomTkinteri ve C++ ile oluşturuldu.
 
 ---
 
